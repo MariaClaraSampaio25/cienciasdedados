@@ -1,4 +1,4 @@
-const url='https://github.com/silviosnjr/CienciaDeDados-CriandoGraficosDinamicosComJavaScript/tree/Aula01/educacao'
+const url='https://raw.githubusercontent.com/silviosnjr/CienciaDeDados-CriandoGraficosDinamicosComJavaScript/refs/heads/Aula01/educacao/educacao-dados-globais.json'
 
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
@@ -6,9 +6,7 @@ async function vizualizarInformacoesGlobais() {
     console.log(dados)
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
-    paragrafo.innerHTML = `Em um mundo com {"total_pessoas_mundo"} de pessoas, a educação emerge como a verdadeira chave para a transformação social. Sendo que 6 bilhões de pessoas têm acesso a educação com tempo médio tempo de 4,0 horas de estudos por dia.
-                Contudo, a jornada educacional não se resume apenas a diplomas. Ela envolve um desejo profundo por conhecimento e crescimento pessoal, refletindo a necessidade de um ambiente que valorize a formação integral. À medida que a sociedade avança, o papel da educação se torna ainda mais crucial, não apenas para abrir portas, mas para cultivar um futuro onde todos possam encontrar seu lugar e contribuir de forma significativa. Assim, ao olharmos para o horizonte, percebemos que o verdadeiro sucesso está enraizado na educação que transforma vidas e comunidades. Com cerca de 1,5 bilhão de pessoas possuindo um nível de educação superior, percebemos que o verdadeiro sucesso está enraizado na educação que transforma vidas e comunidades.
-                `
+    paragrafo.innerHTML = `Você sabia que o total de pessoas no mundo é de ${dados.total_pessoas_mundo} de pessoas e que o  total de pessoas com acesso à educação é de ${dados.total_pessoas_com_acesso_a_educacao}? O tempo médio gasto por dia estudando é de ${dados.tempo_medio_dia_estudando} horas e o total de pessoas com educação superior é de ${dados.total_pessoas_com_educacao_superior}.  Será que esses dados apontam para uma realidade de um mundo esclarecido e com facilidade de acesso à Educação?`
     const container = document.getElementById('graficos-container')
     container.appendChild(paragrafo);
 }
