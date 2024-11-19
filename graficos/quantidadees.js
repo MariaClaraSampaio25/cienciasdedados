@@ -11,10 +11,14 @@ async function quantidadeEstudantes() {
         y: quantidadeEstudantes,
         type: 'bar',
         marker: {
-          color: getComputedStyle(document.body).getPropertyValue('--primary-color')
+          color: getCSS('--primary-color')
         }
       }
     ]
+    const layout = {
+      plot_bgcolor: getCSS('--bg-color'),
+      paper_bgcolor: getCSS('--bg-color')
+  }
   const grafico = document.createElement('div')
   grafico.className = 'grafico'
   document.getElementById('graficos-container').appendChild(grafico)
