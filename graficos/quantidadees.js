@@ -8,7 +8,7 @@ async function quantidadeEstudantes() {
       {
         x: nomeDasEscolas,
         y: quantidadeEstudantes,
-        type: 'bar'
+        type: 'bar',
         marker: {
           color: getComputedStyle(document.body).getPropertyValue('--primary-color')
         }
