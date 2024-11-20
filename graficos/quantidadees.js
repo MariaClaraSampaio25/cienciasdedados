@@ -14,7 +14,9 @@ async function quantidadeEstudantes() {
         marker: {
           color: getCSS('--primary-color')
         }
-      }
+      },
+
+ 
     ]
 
     const layout = {
